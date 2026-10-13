@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Support Tippy';
+const description =
+  'Get help with Tippy, report a bug, or share feedback about the AI food logger for people with type 1 diabetes.';
+---
+
+<Layout title={title} description={description}>
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <img src="/tippy-icon.png" alt="Tippy" class="w-20 h-20 rounded-2xl mx-auto mb-6 shadow-md" />
+          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 tracking-tight">
+            Support Tippy
+          </h1>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Questions, bug reports and feedback are all welcome — and they make Tippy better.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-8 mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">An independent project</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Tippy is an <strong class="text-gray-900">independent project</strong> built by a
+            single developer, for people living with type 1 diabetes who want carbohydrate
+            counting to be less of a chore — by describing a meal in plain words, or scanning a
+            photo or barcode.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            There is no advertising and no data selling here. Tippy keeps accounts and your
+            diary on its own small server so your log follows you across devices, and it writes
+            to Nightscout only from your device — never through us.
+          </p>
+        </div>
+
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Feedback &amp; bug reports</h2>
+          <p class="text-gray-600 text-center mb-6">
+            Found something wrong? Have an idea? I'd love to hear from you.
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <a
+              href="https://github.com/emavgl/tippy-website/issues"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block group"
+            >
+              <div class="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-gray-400 hover:shadow-xs transition-all h-full">
+                <div class="flex items-center gap-3">
+                  <div class="shrink-0 w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-900 group-hover:text-gray-700 transition-colors">GitHub Issues</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">Report bugs &amp; request features</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="mailto:emavgl.app@gmail.com" class="block group">
+              <div class="bg-white border-2 border-gray-200 rounded-xl p-5 hover:border-gray-400 hover:shadow-xs transition-all h-full">
+                <div class="flex items-center gap-3">
+                  <div class="shrink-0 w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-semibold text-gray-900 group-hover:text-gray-700 transition-colors">Email</h3>
+                    <p class="text-xs text-gray-500 mt-0.5">emavgl.app@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <p class="text-sm text-gray-500 mt-4 text-center">
+            Please don't include private health or account information in public GitHub issues.
+          </p>
+        </div>
+
+        <div class="text-center mt-12 pt-8 border-t border-gray-200">
+          <p class="text-gray-700 text-lg leading-relaxed max-w-xl mx-auto">
+            Thank you for using Tippy.
+          </p>
+          <p class="text-gray-500 text-sm mt-4">
+            — <a href="https://github.com/emavgl" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline">emavgl</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,96 @@
+---
+import '../styles/global.css';
+import NavBar from '../components/NavBar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'Tippy is an AI food logger for people with type 1 diabetes. Describe a meal — or scan a photo or barcode — and it estimates ingredients, calories, carbs and glycemic impact.',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImageURL = new URL('/tippy-icon.png', Astro.site);
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Tippy',
+  url: 'https://tippy.viglianisi.eu',
+  email: 'emavgl.app@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Altenbauerstraße 12',
+    postalCode: '4060',
+    addressLocality: 'Leonding',
+    addressCountry: 'AT',
+  },
+  logo: ogImageURL.toString(),
+  sameAs: ['https://github.com/emavgl/tippy-website'],
+};
+
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Tippy',
+  description,
+  applicationCategory: 'HealthApplication',
+  operatingSystem: ['Android', 'iOS', 'Web'],
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+};
+
+const schemas = [softwareSchema, organizationSchema];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="Tippy, AI food logger, type 1 diabetes, carbohydrate counting, carb counting, glycemic index, glycemic load, food diary, meal photo, barcode scan, nutrition"
+    />
+    <meta name="author" content="Tippy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f7a3f" />
+
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/tippy-icon.png" />
+
+    <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:image:alt" content="Tippy — AI food logger" />
+    <meta property="og:site_name" content="Tippy" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    {schemas.map((schema) => (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+    ))}
+  </head>
+  <body class="bg-white text-gray-900 antialiased flex flex-col min-h-screen">
+    <NavBar />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,55 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-gray-50 border-t border-gray-200 py-12">
+  <div class="container mx-auto px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <img src="/tippy-icon.png" alt="Tippy" class="w-8 h-8 rounded-lg" />
+            <span class="font-semibold text-gray-900">Tippy</span>
+          </div>
+          <p class="text-sm text-gray-600">
+            An AI food logger for people with type 1 diabetes. Estimates only —
+            always verify before acting on them.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3 text-sm">Product</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="https://github.com/emavgl/tippy-website" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">Source code</a>
+            </li>
+            <li>
+              <a href="https://github.com/emavgl/tippy-website/issues" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">Report an issue</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3 text-sm">Legal</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/privacy" class="text-gray-600 hover:text-gray-900">Privacy Policy</a></li>
+            <li><a href="/terms" class="text-gray-600 hover:text-gray-900">Terms &amp; Conditions</a></li>
+            <li><a href="/impressum" class="text-gray-600 hover:text-gray-900">Impressum</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-semibold text-gray-900 mb-3 text-sm">Support</h3>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/support" class="text-gray-600 hover:text-gray-900">Help &amp; contact</a></li>
+            <li><a href="mailto:emavgl.app@gmail.com" class="text-gray-600 hover:text-gray-900">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
+        <p>© {year} Emanuele Viglianisi. Tippy is informational and is not a medical device.</p>
+      </div>
+    </div>
+  </div>
+</footer>

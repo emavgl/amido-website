@@ -1,0 +1,30 @@
+---
+const isHome = Astro.url.pathname === '/';
+---
+
+<nav class="border-b border-gray-200">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/">
+        <div class="flex items-center gap-3">
+          <img src="/tippy-icon.png" alt="Tippy" class="w-10 h-10 rounded-lg" />
+          <span class="text-xl font-semibold text-gray-900">Tippy</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        {!isHome && (
+          <button
+            type="button"
+            class="text-sm font-semibold px-4 py-2 rounded-lg bg-brand-soft hover:bg-green-100 text-brand transition-colors shadow-xs border border-green-200">
+            Support
+          </button>
+        )}
+        <button
+          type="button"
+          class="text-sm font-semibold px-4 py-2 rounded-lg bg-brand hover:bg-brand-dark text-white transition-colors shadow-xs">
+          Open app
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
