@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const title = 'Amido — AI food logger for type 1 diabetes';
+const title = 'Amido — AI food diary for everyday nutrition';
 const description =
-  'Describe a meal — or scan a photo or barcode — and Amido estimates ingredients, calories, carbs, protein, fat, fiber and glycemic impact. A food diary built for carbohydrate counting, stored on your device.';
+  'Describe a meal — or scan a photo or barcode — and Amido estimates ingredients, calories, carbs, protein, fat and fiber. A simple food diary stored on your device.';
 
 const features = [
   {
@@ -15,8 +15,8 @@ const features = [
     body: 'Snap a plate the AI can read, or scan a product barcode to pull nutrition straight from Open Food Facts.',
   },
   {
-    title: 'Carbs first',
-    body: 'Carbohydrates, net carbs, fiber and glycemic load — the numbers that matter for carbohydrate counting.',
+    title: 'Nutrition details',
+    body: 'Calories, carbs, fiber, protein and fat — the everyday numbers, with a clear ingredient breakdown.',
   },
   {
     title: 'Edit every detail',
@@ -25,6 +25,10 @@ const features = [
   {
     title: 'Your diary, on your device',
     body: 'Meals are stored on your phone, not on our servers. Export a backup to iCloud Drive, Google Drive or Files whenever you want.',
+  },
+  {
+    title: 'Automation, optional',
+    body: 'Send new meals to a webhook you control. Events are queued offline and retried later.',
   },
 ];
 
@@ -41,12 +45,12 @@ const steps = [
       <div class="max-w-3xl mx-auto text-center">
         <img src="/tippy-icon.png" alt="Amido" class="w-24 h-24 rounded-3xl mx-auto mb-6 shadow-lg" />
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-4">
-          Food logging that counts carbs
+          Food logging, made simple
         </h1>
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-          Amido is an AI food logger for people with type 1 diabetes. Describe a meal in
-          words — or scan a photo or barcode — and it estimates ingredients, calories,
-          carbs and glycemic impact. Your diary stays on your device.
+          Amido is an AI food diary for everyday nutrition. Describe a meal in words —
+          or scan a photo or barcode — and it estimates ingredients, calories, carbs,
+          protein, fat and fiber. Your diary stays on your device.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-3">
           <button
@@ -63,7 +67,7 @@ const steps = [
           </button>
         </div>
         <p class="text-sm text-gray-500 mt-6">
-          Estimates only. Amido is not a medical device — always verify before acting on it.
+          Estimates only. Always check the result before relying on it.
         </p>
       </div>
     </div>
@@ -137,9 +141,8 @@ const steps = [
         <p class="leading-relaxed">
           Amido provides information only and is <strong>not</strong> medical or nutritional
           advice. Estimates come from automated systems and public food databases and may be
-          inaccurate. Always double-check ingredients, quantities and carbohydrates against a
-          product label or another authoritative source before relying on them — especially for
-          carbohydrate counting or any dietary or medical decision.
+          inaccurate. Always double-check ingredients, quantities and nutrition values against a
+          product label or another authoritative source before relying on them.
         </p>
       </div>
     </div>

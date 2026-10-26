@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Amido is an AI food logger for people with type 1 diabetes. Describe a meal — or scan a photo or barcode — and it estimates ingredients, calories, carbs and glycemic impact.',
+  description = 'Amido is an AI food diary for everyday nutrition. Describe a meal — or scan a photo or barcode — and it estimates ingredients, calories, carbs, protein, fat and fiber.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -38,7 +38,7 @@ const softwareSchema = {
   '@type': 'SoftwareApplication',
   name: 'Amido',
   description,
-  applicationCategory: 'HealthApplication',
+  applicationCategory: 'LifestyleApplication',
   operatingSystem: ['Android', 'iOS', 'Web'],
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
 };
@@ -54,7 +54,7 @@ const schemas = [softwareSchema, organizationSchema];
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="Amido, AI food logger, type 1 diabetes, carbohydrate counting, carb counting, glycemic index, glycemic load, food diary, meal photo, barcode scan, nutrition"
+      content="Amido, AI food diary, calorie tracker, meal logger, nutrition, carbs, protein, fiber, food diary, meal photo, barcode scan"
     />
     <meta name="author" content="Amido" />
     <meta name="robots" content="index, follow" />
