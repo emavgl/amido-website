@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 const title = 'Tippy — AI food logger for type 1 diabetes';
 const description =
-  'Describe a meal — or scan a photo or barcode — and Tippy estimates ingredients, calories, carbs, protein, fat, fiber and glycemic impact. A food diary built for carbohydrate counting.';
+  'Describe a meal — or scan a photo or barcode — and Tippy estimates ingredients, calories, carbs, protein, fat, fiber and glycemic impact. A food diary built for carbohydrate counting, stored on your device.';
 
 const features = [
   {
@@ -23,8 +23,8 @@ const features = [
     body: 'Adjust a quantity, drop an ingredient, search or re-scan — the diary totals update as you go.',
   },
   {
-    title: 'Your diary',
-    body: 'A daily log of meals with running totals per day, and the facts you choose to track.',
+    title: 'Your diary, on your device',
+    body: 'Meals are stored on your phone, not on our servers. Export a backup to iCloud Drive, Google Drive or Files whenever you want.',
   },
   {
     title: 'Nightscout, optional',
@@ -50,7 +50,7 @@ const steps = [
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
           Tippy is an AI food logger for people with type 1 diabetes. Describe a meal in
           words — or scan a photo or barcode — and it estimates ingredients, calories,
-          carbs and glycemic impact.
+          carbs and glycemic impact. Your diary stays on your device.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-3">
           <button
@@ -104,6 +104,19 @@ const steps = [
             </div>
           ))}
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-3xl mx-auto bg-brand-soft border border-gray-200 rounded-2xl p-6 md:p-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-2">Your diary stays on your device</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Tippy keeps your meals on your phone, not on our servers. Export a backup to iCloud
+          Drive, Google Drive or Files, import it on a new device, and delete the on-device
+          copy whenever you want. There is no cross-device sync — you are in control of the file.
+        </p>
       </div>
     </div>
   </section>

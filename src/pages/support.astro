@@ -29,10 +29,67 @@ const description =
             photo or barcode.
           </p>
           <p class="text-gray-700 leading-relaxed">
-            There is no advertising and no data selling here. Tippy keeps accounts and your
-            diary on its own small server so your log follows you across devices, and it writes
-            to Nightscout only from your device — never through us.
+            There is no advertising and no data selling here. Your diary is stored on your
+            device, not on our servers, and there is no cross-device sync. You can export a
+            backup file in Settings → Your data, import it on another device, and delete the
+            on-device diary at any time. Nightscout is written only from your device — never
+            through us.
           </p>
+        </div>
+
+
+        <div class="mb-16">
+          <h2 class="text-2xl font-bold text-gray-900 mb-4 text-center">Common questions</h2>
+          <div class="space-y-3">
+            <details class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-gray-900">Where is my diary stored?</summary>
+              <p class="mt-3 text-gray-600 leading-relaxed">
+                On your device. Meals, ingredients, quantities and nutrition values are kept in
+                the app's local database and are not uploaded to our servers. The account is used
+                for the AI service, fair-use limits and subscriptions.
+              </p>
+            </details>
+            <details class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-gray-900">How do I back it up?</summary>
+              <p class="mt-3 text-gray-600 leading-relaxed">
+                Open Settings → Your data → Export backup. The app creates a JSON file and opens
+                the system share sheet, so you can save it to iCloud Drive, Google Drive, Files or
+                anywhere else. Import it later from the same screen.
+              </p>
+            </details>
+            <details class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-gray-900">Does my diary sync between devices?</summary>
+              <p class="mt-3 text-gray-600 leading-relaxed">
+                No. There is no cross-device sync. Export a backup on one device and import it on
+                the other. This keeps the diary out of our servers, but it also means the file is
+                the only way to move it.
+              </p>
+            </details>
+            <details class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-gray-900">Is it included in iCloud or Google backup?</summary>
+              <p class="mt-3 text-gray-600 leading-relaxed">
+                If device backup is enabled, the operating system may include the diary in its
+                backup. That copy is controlled by Apple or Google and is not accessible to us.
+                You can also export your own backup at any time.
+              </p>
+            </details>
+            <details class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-gray-900">What happens if I delete the app?</summary>
+              <p class="mt-3 text-gray-600 leading-relaxed">
+                The diary on the device is removed. You can restore it from an exported backup, or
+                from an iCloud/Google device backup if one exists. Export a copy before
+                uninstalling if you might want the data back.
+              </p>
+            </details>
+            <details class="bg-gray-50 border border-gray-200 rounded-xl p-5">
+              <summary class="cursor-pointer font-semibold text-gray-900">How do I delete my data?</summary>
+              <p class="mt-3 text-gray-600 leading-relaxed">
+                Settings → Your data → Delete diary removes the on-device entries. Deleting your
+                account removes the account, usage counters and subscription data from our
+                servers.
+              </p>
+            </details>
+          </div>
         </div>
 
         <div class="mb-16">
