@@ -1,6 +1,6 @@
-# tippy website
+# Amido website
 
-Static marketing, support and legal site for **Tippy** — the AI food logger for
+Static marketing, support and legal site for **Amido** — the AI food logger for
 people with type 1 diabetes. Built with [Astro](https://astro.build) + Tailwind,
 deployed as static files.
 
