@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 const title = 'Amido — AI food diary for everyday nutrition';
 const description =
-  'Describe a meal — or scan a photo or barcode — and Amido estimates ingredients, calories, carbs, protein, fat and fiber. A simple food diary stored on your device.';
+  'Describe a meal — or scan a photo or barcode — and Amido estimates ingredients, calories, carbs, protein, fat, fiber and an educational glycemic-load estimate. A simple food diary stored on your device.';
 
 const features = [
   {
@@ -17,6 +17,10 @@ const features = [
   {
     title: 'Nutrition details',
     body: 'Calories, carbs, fiber, protein and fat — the everyday numbers, with a clear ingredient breakdown.',
+  },
+  {
+    title: 'Glycemic load, explained',
+    body: 'See an estimated glycemic load and the ingredients driving it — educational nutrition information, not a glucose prediction.',
   },
   {
     title: 'Edit every detail',
@@ -50,7 +54,8 @@ const steps = [
         <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
           Amido is an AI food diary for everyday nutrition. Describe a meal in words —
           or scan a photo or barcode — and it estimates ingredients, calories, carbs,
-          protein, fat and fiber. Your diary stays on your device.
+          protein, fat, fiber and an educational glycemic-load estimate. Your diary
+          stays on your device.
         </p>
         <div class="flex flex-wrap items-center justify-center gap-3">
           <button

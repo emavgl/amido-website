@@ -10,7 +10,7 @@ interface Props {
 
 const {
   title,
-  description = 'Amido is an AI food diary for everyday nutrition. Describe a meal — or scan a photo or barcode — and it estimates ingredients, calories, carbs, protein, fat and fiber.',
+  description = 'Amido is an AI food diary for everyday nutrition. Describe a meal — or scan a photo or barcode — and it estimates ingredients, calories, carbs, protein, fat, fiber and an educational glycemic-load estimate.',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -54,7 +54,7 @@ const schemas = [softwareSchema, organizationSchema];
     <meta name="description" content={description} />
     <meta
       name="keywords"
-      content="Amido, AI food diary, calorie tracker, meal logger, nutrition, carbs, protein, fiber, food diary, meal photo, barcode scan"
+      content="Amido, AI food diary, calorie tracker, meal logger, nutrition, carbs, protein, fiber, estimated glycemic load, food diary, meal photo, barcode scan"
     />
     <meta name="author" content="Amido" />
     <meta name="robots" content="index, follow" />
