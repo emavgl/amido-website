@@ -30,5 +30,5 @@ npm run preview    # preview the build
 `astro.config.mjs` (`site`) and, for GitHub Pages, in `public/CNAME`.
 
 The accent colour (`#0f7a3f`) and branding live in `src/styles/global.css`;
-the icon is `public/tippy-icon.png` (kept in sync with the app icon in the
-`emavgl/tippy-food` repository).
+the icon is `public/amido-icon.png` (kept in sync with the app icon in the
+`emavgl/amido-food` repository).

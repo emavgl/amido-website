@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   integrations: [sitemap()],
-  site: 'https://tippy.viglianisi.eu',
+  site: 'https://amido.viglianisi.eu',
   output: 'static',
   vite: {
     plugins: [tailwindcss()],
