@@ -26,7 +26,7 @@ const description =
             4060 Leonding, Austria<br />
             <a href="mailto:emavgl.app@gmail.com" class="text-brand hover:underline">emavgl.app@gmail.com</a>
           </address>
-          <p>No data protection officer has been appointed. Privacy questions and requests can be sent to the address or email above.</p>
+          <p>We have assessed whether a data protection officer is required. Based on the current scale and activities, no DPO has been appointed. Privacy questions and requests can be sent to the address or email above.</p>
         </section>
 
         <section class="space-y-4 mb-10">
@@ -46,23 +46,24 @@ const description =
           <p><strong class="text-gray-900">Account.</strong> Amido uses social sign-in only (Google or Apple). We receive the email address and account identifier from the provider and store an internal user id, a display username, the account creation date and — if you subscribe — a subscription status and a payment-provider customer reference. We do not receive or store passwords. Your sign-in token is stored on your device.</p>
           <p><strong class="text-gray-900">Diary.</strong> Your diary is stored on your device. We do not receive the meal descriptions, ingredients, quantities, nutrition values or timestamps you save, except when you actively submit a meal for AI analysis (see the next section) or contact support. Deleting the app, or using “Delete diary on this device” in Settings → Your data, removes it. There is no server-side diary and no cross-device sync.</p>
           <p><strong class="text-gray-900">Fair use.</strong> The server keeps a daily counter of AI requests per account to enforce the fair-use limit. It contains no meal content.</p>
-          <p><strong class="text-gray-900">Device backups and exports.</strong> If you enable iCloud Backup (iOS) or device backup (Android), the operating system may include the diary in its backup. That backup is controlled by Apple or Google and is not accessible to us. You can export a portable JSON backup at any time in Settings → Your data, and import it later. The legal basis is the performance of the service you requested (Article 6(1)(b) GDPR) and, where relevant, your consent.</p>
+          <p><strong class="text-gray-900">Device backups and exports.</strong> If you enable iCloud Backup (iOS) or device backup (Android), the operating system may include the diary in its backup. That backup is controlled by Apple or Google and is not accessible to us. You can export a portable JSON backup at any time in Settings → Your data, and import it later.</p>
+          <p><strong class="text-gray-900">Legal bases.</strong> Account, AI analysis and subscription processing are necessary to provide the service you requested (Article 6(1)(b) GDPR). Security, abuse prevention and diagnostic logs rely on our legitimate interest in operating a safe service (Article 6(1)(f)). Optional Automation is based on your consent (Article 6(1)(a)) and can be disabled at any time. Where nutrition data is treated as health data, we rely on your explicit consent; you can withdraw it by deleting the relevant data or your account. We do not use automated decision-making that produces legal or similarly significant effects.</p>
         </section>
 
         <section class="space-y-4 mb-10">
           <h2 class="text-2xl font-bold text-gray-900">5. AI analysis and food databases</h2>
           <p>When you describe a meal or submit a photo, the text and/or image is sent to third-party artificial-intelligence providers to extract ingredients, quantities and nutrition estimates. That content is processed to generate your result and is subject to those providers' terms and privacy policies. We may keep a meal description in operational diagnostic logs to debug extraction; those logs are request-scoped and are not linked to your account (no username, email or user id is written with them). Do not submit information you are not comfortable sharing with those providers.</p>
-          <p>Nutrient values are then looked up in public food-composition databases (for example Open Food Facts, USDA and the Canadian Nutrient File) and, where enabled, a decision model is used to pick the most suitable database entry. Results are estimates and may be inaccurate or incomplete — always verify them.</p>
+          <p>Nutrient values are then looked up in public food-composition databases (for example Open Food Facts, USDA and the Canadian Nutrient File) and, where enabled, a decision model is used to pick the most suitable database entry. Results are estimates and may be inaccurate or incomplete — always verify them. The estimates are AI-generated; we do not use them to make decisions with legal or similarly significant effects about you.</p>
         </section>
 
         <section class="space-y-4 mb-10">
           <h2 class="text-2xl font-bold text-gray-900">6. Automation / webhook (optional)</h2>
-          <p>If you enable Automation, Amido sends each saved meal’s description, nutrition totals and compact ingredient rows to the webhook URL you configure. The request is made directly from your device; the URL is stored on your device and the optional signing secret is stored in the device keystore. The recipient is chosen by you, and its processing is governed by that recipient’s terms. Amido does not receive or store this webhook data.</p>
+          <p>If you enable Automation, Amido sends each saved meal’s description, nutrition totals and compact ingredient rows to the webhook URL you configure. The request is made directly from your device; the URL is stored on your device and the optional signing secret is stored in the device keystore. The recipient is chosen by you, and its processing is governed by that recipient’s terms. Amido does not receive or store this webhook data. Automation is optional and relies on your consent; disable it at any time.</p>
         </section>
 
         <section class="space-y-4 mb-10">
           <h2 class="text-2xl font-bold text-gray-900">7. Subscriptions and payments</h2>
-          <p>Subscriptions are purchased through the Apple App Store or Google Play in the mobile apps, and through Stripe on the web. Purchases are processed by those providers under their own terms and privacy policies. Amido receives only the information needed to determine whether your subscription is active, such as a customer or purchase reference and its status. Amido does <strong class="text-gray-900">not</strong> receive or store your payment card details.</p>
+          <p>Subscriptions are purchased through the Apple App Store or Google Play in the mobile apps. Purchases are processed by those providers under their own terms and privacy policies. Amido receives only the information needed to determine whether your subscription is active, such as a customer or purchase reference and its status. Amido does <strong class="text-gray-900">not</strong> receive or store your payment card details.</p>
         </section>
 
         <section class="space-y-4 mb-10">
@@ -84,16 +85,21 @@ const description =
 
         <section class="space-y-4 mb-10">
           <h2 class="text-2xl font-bold text-gray-900">11. Retention and required data</h2>
-          <p>Account data is kept for as long as your account exists. Deleting your account removes the account, usage counters and subscription data from our servers. Your diary is not stored on our servers; it remains on your device until you delete it in Settings → Your data or uninstall the app. Diagnostic logs (including anonymous meal descriptions) are used only for debugging and are not linked to your account. Device backups may retain a copy according to Apple's or Google's retention rules.</p>
+          <p>Account data is kept for as long as your account exists. Deleting your account removes the account, usage counters and subscription data from our servers. We may retain invoices, payment records and tax records where required by law; these are kept only for the statutory retention period. Your diary is not stored on our servers; it remains on your device until you delete it in Settings → Your data or uninstall the app. Diagnostic logs (including anonymous meal descriptions) are retained only as long as needed for debugging and security, and are rotated. Device backups may retain a copy according to Apple's or Google's retention rules.</p>
           <p>Providing personal data is generally voluntary. Without technical request data the website cannot be delivered; without an account the AI features cannot be provided; and without payment-provider processing a subscription cannot be completed or restored.</p>
         </section>
 
         <section class="space-y-4 mb-10">
-          <h2 class="text-2xl font-bold text-gray-900">12. Changes</h2>
+          <h2 class="text-2xl font-bold text-gray-900">12. Children</h2>
+          <p>Amido is not directed at children. You must meet the minimum age for consenting to information-society services in your country (14 in Austria) or have the consent of a parent or guardian.</p>
+        </section>
+
+        <section class="space-y-4 mb-10">
+          <h2 class="text-2xl font-bold text-gray-900">13. Changes</h2>
           <p>This policy may be updated when the website, applications, providers or legal requirements change. The current version is always published on this page.</p>
         </section>
 
-        <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">Last updated: 26 October 2026</p>
+        <p class="text-sm text-gray-500 border-t border-gray-200 pt-6">Last updated: 27 October 2026</p>
       </article>
     </div>
   </section>
